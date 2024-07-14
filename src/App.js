@@ -8,6 +8,8 @@ import Catalogo from './components/catalogo'
 import Pagefinal from './pages/pagefinal'
 import Pagetrailer from './pages/pagetrailer'
 
+
+
 function App() {
   return (
     <>

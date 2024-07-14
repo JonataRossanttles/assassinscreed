@@ -4,7 +4,7 @@
 
 body{
   font-family: "Poppins", sans-serif; 
-  height: 100vh;
+  height: 100%;
 }
 video{
   width: 100%;
@@ -127,6 +127,8 @@ video{
   margin: 0;
 }
 .container-geral-card{
+  max-width: 1400px;
+  margin-top: 90px;
   display: grid;
   justify-items: center;
   padding: 20px;
@@ -136,13 +138,13 @@ video{
   grid-template-columns: repeat(4 ,1fr);
 }
 
-.container-header{
+.container-section{
   position: relative;
   height: 100%;
   width: 650px;
   
 }
-.container-header::after{
+.container-section::after{
   content: '';
   position: absolute;
   top: 0;
@@ -153,7 +155,7 @@ video{
   clip-path: polygon(0 0, 100% 0, calc(100% - clamp(160px, 12vh, 200px)) 100%, 0 100%);
   z-index: 2;
 }
-.container-header::before{
+.container-section::before{
   content: '';
   position: absolute;
   top: 0;
@@ -164,57 +166,58 @@ video{
   clip-path: polygon(0 0, 100% 0, calc(100% - clamp(160px, 12vh, 200px)) 100%, 0 100%);
   z-index: 1;
 }
-.container-header.AssassinsCreed::before {
+.container-section.AssassinsCreed::before {
   background-color: rgba(0, 0, 0, 0.329);
   mask-image: linear-gradient( to right, rgba(0, 0, 0, 0.329), white);
 }
-.container-header.AssassinsCreedII::before {
+.container-section.AssassinsCreedII::before {
   background-color: #B12A2F;
   mask-image: linear-gradient( to right, #B12A2F, rgba(255, 255, 255, 0.582));
 }
-.container-header.AssassinsCreedBrotherhood::before { 
+.container-section.AssassinsCreedBrotherhood::before { 
   background-color: #B12A2F;
   mask-image: linear-gradient( to right, #B12A2F, rgba(255, 255, 255, 0.582));
 }
-.container-header.AssassinsCreedRevelations::before { 
+.container-section.AssassinsCreedRevelations::before { 
   background-color: #3E5A66;
   mask-image: linear-gradient( to right, #3E5A66, rgba(255, 255, 255, 0.582));
 }
-.container-header.AssassinsCreedIII::before {  
+.container-section.AssassinsCreedIII::before {  
   background-color: #8E0403;
   mask-image: linear-gradient( to right, #8E0403, rgba(255, 255, 255, 0.582));
 }
-.container-header.AssassinsCreedIVBlackFlag::before {   
+.container-section.AssassinsCreedIVBlackFlag::before {   
   background-color: #A1212B;
   mask-image: linear-gradient( to right, #A1212B, rgba(255, 255, 255, 0.582));
 }
-.container-header.AssassinsCreedRogue::before {    
+.container-section.AssassinsCreedRogue::before {    
   background-color: #7E1E1F;
   mask-image: linear-gradient( to right, #7E1E1F, rgba(255, 255, 255, 0.582));
 }
-.container-header.AssassinsCreedUnity::before {    
+.container-section.AssassinsCreedUnity::before {    
   background-color: #303D46;
   mask-image: linear-gradient( to right, #303D46, rgba(255, 255, 255, 0.582));
 }
-.container-header.AssassinsCreedSyndicate::before {     
+.container-section.AssassinsCreedSyndicate::before {     
   background-color: #303D46;
   mask-image: linear-gradient( to right, #303D46, rgba(255, 255, 255, 0.582));
 }
-.container-header.AssassinsCreedOrigins::before {  
+.container-section.AssassinsCreedOrigins::before {  
   background-color: #A2540B;
   mask-image: linear-gradient( to right, #A2540B, rgba(255, 255, 255, 0.582));
 }
-.container-header.AssassinsCreedOdyssey::before { 
+.container-section.AssassinsCreedOdyssey::before { 
   background-color: #836D1D;
   mask-image: linear-gradient( to right, #836D1D, rgba(255, 255, 255, 0.582));
 }
-.container-header.AssassinsCreedValhalla::before {  
+.container-section.AssassinsCreedValhalla::before {  
   background-color: #057773;
   mask-image: linear-gradient( to right, #057773, rgba(255, 255, 255, 0.582));
 }
-.container-geral-header{ 
+.container-geral-section{ 
+  position: relative;
   width: 100%;
-  height: 700px;
+  height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   animation: card 2s;
@@ -223,10 +226,10 @@ video{
 
 
 
-.titulo-header,.paragrafo-header{
+.titulo-section,.paragrafo-section{
   font-family: "Poppins", sans-serif;
   color: white;
-  margin-bottom: 16px;
+  margin-bottom: 6px;
   text-align: center;
 }
 
@@ -247,7 +250,7 @@ video{
   border-radius: 7px;
 }
 .container-geral-play{
-  margin: 20px 0px 20px 0px;
+  margin: 20px 0px 15px 0px;
   
 }
 .container-play{
@@ -338,8 +341,47 @@ iframe{
   display: flex;
   justify-content: space-between;
   padding: 0px 10px 0px 10px;
-  width: 100%;
+  width: 554px;
   position: absolute;
-  top: 335px;
+  top: 364px;
   z-index: 4;
+}
+.logo-header,.logo-dna{
+  width: 30px;
+  height: 30px;
+  margin-right: 6px;
+}
+header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #151616;
+}
+.container-logo-header,.container-dna-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-catalogo,.text-linhadotempo{
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.input-pesquisa{
+  font-size: 14px;
+  margin-left: 76px;
+  padding: 5px 10px;
+  font-family: "Poppins", sans-serif;
+  width: 400px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.685);
+  outline: none;
+  background-color: #141313;
+  color: white;
 }
