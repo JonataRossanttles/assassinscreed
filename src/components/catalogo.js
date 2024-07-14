@@ -38,7 +38,7 @@ document.body.style.backgroundColor = 'black'
       <span className='text-catalogo'>Catálogo</span>
       </div>
       <input className='input-pesquisa' placeholder='Digite o jogo desejado...' onChange={add}></input>
-      <Link className='link'>
+      <Link to='/linhatemporal' className='link'>
       <div className='container-dna-header'>
       <img src='/imagens/dna.png' alt='' className='logo-dna'></img>
       <span className='text-linhadotempo'>Acesse a linha do tempo</span>
