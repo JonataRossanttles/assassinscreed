@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {useContext} from 'react'
 import{Link} from 'react-router-dom'
 import DataContext from '../datacontext';
+import Descri from './descri';
 
 function Catalogo({style}) {
 
@@ -46,6 +47,7 @@ document.body.style.backgroundColor = 'black'
       </Link> 
     
     </header>
+      <Descri/>
     <div className='container-geral-card'  >
     {games}
     </div>
