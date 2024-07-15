@@ -1,13 +1,7 @@
-import React, {useState,useEffect, useContext} from 'react'; 
-import {useParams} from 'react-router-dom';
-import {Link} from 'react-router-dom'
-import DataContext from '../datacontext';
+import React from 'react'; 
+
 
 function Descri() {
-
-const {information} = useContext(DataContext)
-const parametro = useParams()
-
 
 
     

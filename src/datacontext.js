@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+
 
 
 const DataContext = createContext();
@@ -7,7 +7,7 @@ const DataContext = createContext();
 export const Provider = ({ children }) => {
   const [information, setInformation] = useState([]);
  
-
+ document.body.style.backgroundColor = 'black'
 
   useEffect(() => {
     fetch('/assassinsCreed.json')

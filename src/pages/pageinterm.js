@@ -25,7 +25,7 @@ document.body.style.backgroundColor = 'black'
     
      <video src='/video/background-intermediario.webm' autoPlay muted disablePictureInPicture className='video2' style={{display: transicao ? 'block' : 'none'}} ></video>
    
-   <Catalogo style={{display: transicao ? 'none' : 'block'}}/>
+   <Catalogo style={{display: transicao ? 'none' : 'block'}}  />
    
     </>
   );

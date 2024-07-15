@@ -5,9 +5,10 @@ import {  Routes, Route } from 'react-router-dom';
 import Pagehome from './pages/pagehome'
 import Pageinterm from './pages/pageinterm';
 import Catalogo from './components/catalogo'
-import Pagefinal from './pages/pagefinal'
-import Pagetrailer from './pages/pagetrailer'
 import Linhatemporal from './components/linhatemporal'
+import Trailer from './components/trailer';
+import Section from './components/section';
+import Curiosidades from './components/curiosidades';
 
 
 
@@ -19,9 +20,11 @@ function App() {
         <Route path='/'    element={<Pagehome/>} />
         <Route path='/pageinterm'    element={<Pageinterm/>} />
         <Route path='/catalogo'    element={<Catalogo/>} />
-        <Route path='/:id'    element={<Pagefinal/>} />
-        <Route path='/:id/pagetrailer'    element={<Pagetrailer/>} />
-        <Route path='/linhatemporal'    element={<Linhatemporal/>} />
+        <Route path='/:id'    element={<Section/>} />
+        <Route path='/:id/pagetrailer'    element={<Trailer/>} />
+        <Route path='/linha temporal'    element={<Linhatemporal/>} />
+        <Route path='/Curiosidades'    element={<Curiosidades/>} />
+    
         
       </Routes>
  

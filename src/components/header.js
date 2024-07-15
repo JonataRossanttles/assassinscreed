@@ -1,95 +1,72 @@
-import React, {useState,useEffect, useContext} from 'react'; 
-import {useParams} from 'react-router-dom';
-import {Link} from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import {useContext} from 'react'
+import{Link,useLocation} from 'react-router-dom'
 import DataContext from '../datacontext';
 
-function Header() {
+
+function Header({ setElementosfiltrados }) {
 
 const {information} = useContext(DataContext)
-const parametro = useParams()
-const [nameprev,setNameprev] = useState()
-const [namenext,setNamenext] = useState()
-const [estado,setEstado] = useState(false)
-const [estado2,setEstado2] = useState(false)
-const [gameselect, setGameselect] = useState({})
+const path = useLocation()
+const [menu,setMenu] = useState([])
+const list = ['Loja','Curiosidades','Linha temporal']
 
 
-
-useEffect(()=>{
-  if(information){
-    const obj =  information.find(element => element.name === parametro.id)
-    
-    return setGameselect(obj)
+useEffect(() => {
+  if (setElementosfiltrados) {
+    setElementosfiltrados(information);
   }
+}, [information, setElementosfiltrados]);
 
-},[information,parametro])
-
-useEffect(()=>{
-  if(gameselect.id){
-    if(gameselect.id === 1 ){
-      setEstado(true)
-    }else{
-      const novoid = gameselect.id - 1
-      const novoobj =  information.find(element => element.id === novoid)
-      const nameprev = novoobj.name
-      setEstado(false)
-     return  setNameprev(nameprev)
-    }
+// Função onclick do input 
+function add(event){
+  if(setElementosfiltrados){
+    const elementos = information.filter(element =>  element.name.toLowerCase().includes(event.target.value.toLowerCase())   )
+    setElementosfiltrados(elementos)
   }
-},[gameselect,information,parametro])
    
+}
+
+// Criação da lista do menu
 useEffect(()=>{
-  if(gameselect.id){
-    if(gameselect.id === information.length ){
-      setEstado2(true)
-    }else{
-      const novoid = gameselect.id + 1
-      const novoobj =  information.find(element => element.id === novoid)
-      const namenext = novoobj.name
-      setEstado2(false)
-     return  setNamenext(namenext)
-    }
-  }
-},[gameselect,information,parametro])
-
-
-    
+  const li =  list.map((element,index)=> element === 'Loja' ? (
+    <a 
+      href="https://store.ubisoft.com/ofertas/assassins-creed?lang=pt_BR&gad_source=1&gclid=Cj0KCQjwkdO0BhDxARIsANkNcreDyKO5Y1SzteEjFatVKCp9euGwN4OPaUPW9uWTNREwUKZB0lLIRq8aAsYNEALw_wcB" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="link" 
+      key={index}
+    >
+      <li className="option">{element}</li>
+    </a>
+  ):(
+    <Link to={`/${element}`} className="link" key={index}>
+      <li className="option">{element}</li>
+    </Link>
+  )
   
+   )
+ 
+ setMenu(li)
+ },[])
 
-
-
+ 
   return (
     <>
-    <header className='container-geral-header'   style={{backgroundImage: `url(${gameselect.imgprincipal})`}}>
-      <div className= {`container-header ${gameselect.backbefore}`}  >
-        <div className='container-logo'>
-        <img src={gameselect.logo} alt='' className='logo' style={{width:gameselect.widthlogo, height:gameselect.heightlogo}}></img>
-          <div className='container-geral-play'>
-          <img src={gameselect.img1} alt='' className='img-video'></img>
-         <Link to={`/${gameselect.name}/pagetrailer`}>
-          <div className='container-play'>
-            <img src='/imagens/play.png' alt='' className='play'></img>
-          </div>
-         </Link> 
-         </div>
-        
-        <h2 className='titulo-header'>{gameselect.name} </h2>
-        <p className='paragrafo-header'> {gameselect.synopsis}</p>
-       
-        </div>
-      
+    
+    <header style={{backgroundColor: path.pathname === '/Linha%20temporal' ? 'transparent' : 'black' }}>
+      <div className='container-logo-header'>
+      <Link to='/catalogo' className='link'>
+        <img src='/imagens/logo-header.png' alt='' className='logo-header'></img>
+        <span className='text-catalogo' >Catálogo</span>
+      </Link>  
       </div>
-      <Link to='/catalogo' className='link'> <div className='button-voltar'>
-          <img src='/imagens/fechar.png' alt='' className='fechar'></img>
-
-           </div></Link> 
-           <div className='container-setas'>
-            <Link to={`/${nameprev}`}><img src='/imagens/seta.png' alt='' className='prev' style={{display:estado ? 'none' : 'block' }}></img></Link>
-            <Link to={`/${namenext}`}><img src='/imagens/seta.png' alt='' className='next' style={{display:estado2 ? 'none' : 'block' }}></img></Link>
-           </div>
-          
-    </header>
-   
+      <input className='input-pesquisa' placeholder='Digite o jogo desejado...' onChange={add} style={{display: path.pathname === '/catalogo' ? 'block':'none' }}></input>
+      <ul className='container-options'>
+        {menu}
+      </ul>
+      
+    </header>   
     
     </>
   );

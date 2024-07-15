@@ -4,8 +4,12 @@
 
 body,html{
   font-family: "Poppins", sans-serif; 
-  height: 100%;
+  
 }
+body::-webkit-scrollbar {
+  display: none; /* Oculta a barra de rolagem */
+}
+
 video{
   width: 100%;
   height: 100%;
@@ -76,7 +80,17 @@ video{
       opacity: 1;
     }
     }
-  
+    @keyframes temp{
+      0%{
+       top: 5px;
+      }
+      50%{
+        top: 0px;
+      }
+      100%{
+        top: 5px;
+      }
+      }
 
 .linha-temporal{
   position: absolute;
@@ -95,6 +109,17 @@ video{
   animation: card 3s ;
   border-radius: 3px 3px 0px 0px;
   opacity: 0.8;
+  background-color: transparent;
+  z-index: 999;
+}
+.card-curiosidades{
+  width: 350px;
+  height: 525px;
+  animation: card 3s ;
+  border-radius: 3px 3px 0px 0px;
+  background-color: transparent;
+  border: 1px solid gray;
+  border-radius: 5px;
   
 }
 
@@ -119,6 +144,31 @@ video{
   transition: 0.5s all;
   
 }
+.img-curiosidades{
+height: 200px;
+width: 100%;
+}
+.titulo-curiosidades, .texto-curiosidades{
+  color: white;
+  font-family: "Poppins", sans-serif; 
+  text-align: center;
+  padding: 0px 10px 0px 10px;
+  margin-top: 8px;
+}
+.texto-curiosidades{
+  text-align: justify;
+}
+.container-geral-curiosidades{
+  display: grid;
+  grid-template-columns: repeat(3,minmax(350px,1fr));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  gap: 10px;
+  padding-top: 100px;
+  margin: auto;
+}
 
 .titulo-card{
   color: white;
@@ -137,7 +187,7 @@ video{
   position: relative;
   gap: 16px;
   top: 0;
-  grid-template-columns: repeat(4 ,1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
 }
 
 .container-section{
@@ -366,22 +416,34 @@ header{
   padding: 20px;
   background-color: black;
 }
-.container-logo-header,.container-dna-header{
+.container-logo-header,.container-options{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 0;
+  padding-left: 0;
+ 
+}
+.option{
+  list-style: none;
+  font-family: "Poppins", sans-serif; 
+  color: white;
+  margin-left: 25px;
+  
 }
 
-.text-catalogo,.text-linhadotempo{
+
+.text-catalogo{
   color: white;
   font-family: "Poppins", sans-serif;
 }
 .input-pesquisa{
   font-size: 14px;
-  margin-left: 76px;
+  position: absolute;
+  left: 236px;
   padding: 5px 10px;
   font-family: "Poppins", sans-serif;
-  width: 400px;
+  width: 350px;
   border-radius: 6px;
   border: 1px solid rgba(255, 255, 255, 0.685);
   outline: none;
@@ -393,7 +455,12 @@ header{
   height: 100%;
   width: 100%;
 }
+.video-dna{
+  width: 100%;
+  height: 100vh;
+}
 .container-geral-descri{
+  position: relative;
   height: 450px;
   width: 100%;
   animation: card 3s;
@@ -409,9 +476,56 @@ header{
 }
 .logo-descri,.nome-descri{
   position: absolute;
-  top: 100px;
-  right: 39%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   height: 300px;
   width: 300px;
 }
 
+.video-dna{
+  width: 100%;
+  height: 100vh;
+  
+}
+.img-card-temp{
+  z-index: 1;
+  border-radius: 6px 6px 0px 0px;
+  width: 100%;
+  height: 400px;
+  text-decoration: none;
+}
+.card-temp{
+  width: 300px;
+ 
+  animation-iteration-count:infinite;
+  
+}
+.container-geral-temp{
+  display: grid;
+  justify-items: center;
+  overflow: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100vh;
+  transform: translate(-50%,-50%);
+  padding-top: 100px;
+ 
+}
+.titulo-card-temp{
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  font-family: "Poppins", sans-serif; 
+  
+}
+#card1,#card3,#card5,#card7,#card9,#card11{
+  position:relative ;
+  left: -400px;
+}
+#card2,#card4,#card6,#card8,#card10,#card12{
+  position:relative ;
+  left: 400px;
+}
