@@ -61,7 +61,7 @@ useEffect(()=>{
         <span className='text-catalogo' >Catálogo</span>
       </Link>  
       </div>
-      <input className='input-pesquisa' placeholder='Digite o jogo desejado...' onChange={add} style={{display: path.pathname === '/catalogo' || '/pageinterm' ? 'block':'none' }}></input>
+      <input className='input-pesquisa' placeholder='Digite o jogo desejado...' onChange={add} style={{display: path.pathname === '/catalogo' ||  path.pathname === '/pageinterm' ? 'block':'none' }}></input>
       <ul className='container-options'>
         {menu}
       </ul>
