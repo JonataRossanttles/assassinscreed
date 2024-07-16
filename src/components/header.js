@@ -55,7 +55,7 @@ useEffect(()=>{
   return (
     <>
     
-    <header style={{backgroundColor: path.pathname === '/Linha%20temporal' ? 'transparent' : 'black' }}>
+    <header style={{backgroundColor: path.pathname === '/Linha%20temporal'  && menumobile == false ? 'transparent' : 'black' }}>
       <div className='container-logo-header'>
       <Link to='/catalogo' className='link'>
         <img src='/imagens/logo-header.png' alt='' className='logo-header'></img>
