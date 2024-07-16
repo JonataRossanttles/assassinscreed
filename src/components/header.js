@@ -66,7 +66,7 @@ useEffect(()=>{
       
       <div className='menu-mobile'  onClick={() => setMenumobile(!menumobile)}>
         <img src= {menumobile  ?  '/imagens/icon-close.svg' : '/imagens/icon-hamburger.svg'  } alt='' className='hamburguer'></img>
-        <ul className='container-options-mobile'>
+        <ul className='container-options-mobile' style={{display: menumobile ? 'flex' : 'none' }}>
         {menumobile ?  menu : '' }
         </ul>
       </div>
