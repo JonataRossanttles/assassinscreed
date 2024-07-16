@@ -1,11 +1,14 @@
 import React, {useState,useEffect, useContext} from 'react'; 
 import DataContext from '../datacontext';
 import Header from './header';
+import Loader from './loader';
 
 function Linhatemporal() {
 
 const {information} = useContext(DataContext)
 const [cards,setCards] = useState()
+const [loader,Setloader] = useState(true)
+
 
 
 useEffect(()=>{
@@ -20,22 +23,33 @@ const elemento = information.map(element =>
 </div>)
 
 setCards(elemento)
-
+setTimeout(() => {
+  Setloader(false)
+  
+}, 2000);
 },[information])
   
    
   return (
     <>
 
-   <Header></Header>
-  
-  
-   <video src='/video/dna.webm' autoPlay muted loop disablePictureInPicture className='video-dna' > </video>
-   
-   <div className='container-geral-temp'>
-   {cards}
 
-   </div>
+  
+  
+<Header></Header>
+   
+   
+   
+   { loader ? <Loader></Loader> : <div>
+    
+    <video src='/video/dna.webm' autoPlay muted loop disablePictureInPicture className='video-dna' > </video>
+    <div className='container-geral-temp'>{cards}</div>
+    
+   </div> 
+    
+    
+    }
+
    
    
    

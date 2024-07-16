@@ -5,7 +5,8 @@ import DataContext from '../datacontext';
 
 function Section() {
 
-const {information} = useContext(DataContext)
+const {information,localDatajson} = useContext(DataContext)
+//const localstorage = JSON.parse(localStorage.getItem('assassinsCreedData'))
 const parametro = useParams()
 const [nameprev,setNameprev] = useState()
 const [namenext,setNamenext] = useState()
@@ -13,11 +14,10 @@ const [estado,setEstado] = useState(false)
 const [estado2,setEstado2] = useState(false)
 const [gameselect, setGameselect] = useState({})
 
-
-
+console.log(localDatajson)
 useEffect(()=>{
-  if(information){
-    const obj =  information.find(element => element.name === parametro.id)
+  if(localDatajson){
+    const obj =  localDatajson.find(element => element.name === parametro.id)
     
     return setGameselect(obj)
   }
@@ -30,7 +30,7 @@ useEffect(()=>{
       setEstado(true)
     }else{
       const novoid = gameselect.id - 1
-      const novoobj =  information.find(element => element.id === novoid)
+      const novoobj = localDatajson.find(element => element.id === novoid)
       const nameprev = novoobj.name
       setEstado(false)
      return  setNameprev(nameprev)
@@ -40,11 +40,11 @@ useEffect(()=>{
    
 useEffect(()=>{
   if(gameselect.id){
-    if(gameselect.id === information.length ){
+    if(gameselect.id === localDatajson.length ){
       setEstado2(true)
     }else{
       const novoid = gameselect.id + 1
-      const novoobj =  information.find(element => element.id === novoid)
+      const novoobj =  localDatajson.find(element => element.id === novoid)
       const namenext = novoobj.name
       setEstado2(false)
      return  setNamenext(namenext)

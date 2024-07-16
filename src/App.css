@@ -80,17 +80,18 @@ video{
       opacity: 1;
     }
     }
-    @keyframes temp{
+    @keyframes loader{
       0%{
-       top: 5px;
+       transform: translate(-50%,-50%) scale(1);
       }
       50%{
-        top: 0px;
+        transform: translate(-50%,-50%) scale(1.3);
       }
       100%{
-        top: 5px;
+        transform: translate(-50%,-50%) scale(1);
       }
       }
+     
 
 .linha-temporal{
   position: absolute;
@@ -543,4 +544,36 @@ header{
 #card2,#card4,#card6,#card8,#card10,#card12{
   position:relative ;
   left: 400px;
+}
+.loader{
+
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+ background-color: rgba(0, 0, 0, 0.096);
+}
+.text-loader{
+  color: white;
+ 
+  font-size: 20px;
+  font-family: "Poppins", sans-serif; 
+}
+.container-loader{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  
+  animation: loader 0.9s linear  infinite;
+}
+.logo-loader{
+  width: 100px;
+  height: 100px;
+ 
 }
