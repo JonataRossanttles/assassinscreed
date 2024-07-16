@@ -644,13 +644,17 @@ header{
  } 
  .container-setas {
   width: 100%;
-  top: 327px;
+  top: 232px;
  }
 .container-section::after,.container-section::before{
   clip-path: polygon(0 50%, 100% 26%, 100% 100%, 0% 100%);
 }
+.container-gera-section{
+  background-position: top;
+}
 .container-logo{
 width: 350px;
+height: 800px;
 top: 50%;
 left: 50%;
 transform: translate(-50%,-50%);
