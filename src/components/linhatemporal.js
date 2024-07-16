@@ -12,7 +12,10 @@ useEffect(()=>{
 
 const elemento = information.map(element => 
 <div className='card-temp link' id={`card${element.id}`} >
+  <div className='container-img-card-temp'>
   <img src= {element.poster} alt='' className='img-card-temp' ></img>
+  </div>
+  
   <p className='titulo-card-temp'> {element.release_date}</p>
 </div>)
 
