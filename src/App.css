@@ -162,12 +162,10 @@ width: 100%;
 }
 .container-geral-curiosidades{
   display: grid;
-  grid-template-columns: repeat(3,minmax(350px,1fr));
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+  position: relative;
+  justify-items: center;
+   gap: 30px;
   padding-top: 65px;
   margin: auto;
 }
@@ -513,10 +511,9 @@ header{
 }
 .card-temp{
   width: 300px;
- 
- 
-  
 }
+
+
 .container-geral-temp{
   display: grid;
   justify-items: center;
@@ -545,6 +542,9 @@ header{
 #card2,#card4,#card6,#card8,#card10,#card12{
   position:relative ;
   left: 400px;
+}
+#card1,#card3,#card5,#card7,#card9,#card11,#card2,#card4,#card6,#card8,#card10,#card12{
+  left: 0;
 }
 .loader{
 
@@ -592,9 +592,7 @@ header{
   #card1,#card3,#card5,#card7,#card9,#card11,#card2,#card4,#card6,#card8,#card10,#card12{
     left: 0;
   }
-  .container-geral-curiosidades{
-    grid-template-columns: repeat(1,minmax(350px,1fr));
-  }
+  
  
 }
 
