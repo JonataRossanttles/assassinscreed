@@ -647,7 +647,7 @@ header{
   top: 232px;
  }
 .container-section::after,.container-section::before{
-  clip-path: polygon(0 50%, 100% 26%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 44%, 100% 26%, 100% 100%, 0% 100%);
 }
 .container-gera-section{
   background-position: top;
