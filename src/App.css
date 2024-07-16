@@ -17,7 +17,7 @@ video{
 }
 .video2{
   width: 100%;
-  min-height: 700px;
+  height: 100vh;
   object-fit: cover;
   
 }
@@ -148,6 +148,7 @@ video{
 .img-curiosidades{
 height: 200px;
 width: 100%;
+
 }
 .titulo-curiosidades, .texto-curiosidades{
   color: white;
@@ -576,4 +577,65 @@ header{
   width: 100px;
   height: 100px;
  
+}
+.hamburguer{
+  width: 20px;
+  height: 20px;
+}
+.menu-mobile{
+  z-index: 1;
+  display: none;
+}
+
+
+@media screen and (max-width:1124px){
+  #card1,#card3,#card5,#card7,#card9,#card11,#card2,#card4,#card6,#card8,#card10,#card12{
+    left: 0;
+  }
+  .container-geral-curiosidades{
+    grid-template-columns: repeat(1,minmax(350px,1fr));
+  }
+ 
+}
+
+@media screen and (max-width:924px){
+  .container-options{
+    display: none;
+  }
+  .menu-mobile{
+    display: block;
+  }
+  .input-pesquisa{
+    left: 188px;
+    width: 240px;
+  }
+  .container-options-mobile{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 67px;
+    padding: 0;
+    margin: 0;
+    background-image:  linear-gradient( to bottom, black, rgba(0, 0, 0, 0.349));
+
+  }
+  header{
+    background-color: black;
+  }
+}
+@media screen and (max-width:494px){
+  .container-options{
+    display: none;
+  }
+  .input-pesquisa{
+    left: 50%;
+    transform: translate(-50%);
+    width: 205px;
+  }
+  .text-catalogo{
+    display: none;
+  }
 }

@@ -9,9 +9,10 @@ function Header({ setElementosfiltrados }) {
 const {information} = useContext(DataContext)
 const path = useLocation()
 const [menu,setMenu] = useState([])
+const [menumobile,setMenumobile] = useState(false)
 const list = ['Loja','Curiosidades','Linha temporal']
 
-
+console.log(menumobile)
 useEffect(() => {
   if (setElementosfiltrados) {
     setElementosfiltrados(information);
@@ -62,6 +63,15 @@ useEffect(()=>{
       </Link>  
       </div>
       <input className='input-pesquisa' placeholder='Digite o jogo desejado...' onChange={add} style={{display: path.pathname === '/catalogo' || path.pathname === '/pageinterm' ? 'block':'none' }}></input>
+      
+      <div className='menu-mobile'  onClick={() => setMenumobile(!menumobile)}>
+        <img src= {menumobile  ?  '/imagens/icon-close.svg' : '/imagens/icon-hamburger.svg'  } alt='' className='hamburguer'></img>
+        <ul className='container-options-mobile'>
+        {menumobile ?  menu : '' }
+        </ul>
+      </div>
+      
+      
       <ul className='container-options'>
         {menu}
       </ul>

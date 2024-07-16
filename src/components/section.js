@@ -14,7 +14,7 @@ const [estado,setEstado] = useState(false)
 const [estado2,setEstado2] = useState(false)
 const [gameselect, setGameselect] = useState({})
 
-console.log(localDatajson)
+
 useEffect(()=>{
   if(localDatajson){
     const obj =  localDatajson.find(element => element.name === parametro.id)
