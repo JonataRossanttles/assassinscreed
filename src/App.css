@@ -72,7 +72,7 @@ video{
 }
 }
 
-  @keyframes card{
+@keyframes card{
     0%{
      opacity: 0;
     }
@@ -80,7 +80,7 @@ video{
       opacity: 1;
     }
     }
-    @keyframes loader{
+@keyframes loader{
       0%{
        transform: translate(-50%,-50%) scale(1);
       }
@@ -92,7 +92,7 @@ video{
       }
       }
      
-
+     
 .linha-temporal{
   position: absolute;
   top: 50%;
@@ -114,22 +114,21 @@ video{
   z-index: 999;
 }
 .card-curiosidades{
+  position: relative;
   width: 350px;
   height: 525px;
-  animation: card 3s ;
+  animation: card 2s ;
   border-radius: 3px 3px 0px 0px;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.103);
   border: 1px solid gray;
   border-radius: 5px;
-  opacity: 0.9
+  opacity: 0.9;
 }
 
 .img-card{
  border-radius: 2px 2px 0px 0px;
   width: 100%;
   height: 378px;
-  
-  
 }
 .card:hover{
   transform: scale(1.05);
@@ -137,19 +136,22 @@ video{
   z-index: 1;
   opacity: 1;
   border-radius:2px 2px 0px 0px ;
-   
  }
 
  .img-card:hover {
- 
   transition: 0.5s all;
-  
 }
+
 .img-curiosidades{
 height: 200px;
-width: 100%;
+width: 200px;
+position: relative;
+top: 5px;
+left: 50%;
+transform: translate(-50%);
 
 }
+
 .titulo-curiosidades, .texto-curiosidades{
   color: white;
   font-family: "Poppins", sans-serif; 
@@ -166,7 +168,7 @@ width: 100%;
   position: relative;
   justify-items: center;
    gap: 30px;
-  padding-top: 65px;
+  padding-top: 70px;
   margin: auto;
 }
 
@@ -331,7 +333,7 @@ iframe{
   
 }
 .container-play:hover{
-  transform: scale(1.1);
+  transform:  translate(-50,-50%) scale(1.1);
   transition: 0.3s ease-in-out;
   background-color: rgba(255, 255, 255, 0.267);
 }
@@ -500,7 +502,7 @@ header{
   opacity: 0.9;
   
 }
-.container-img-card-temp::after{
+.img-card-temp::after{
   content: '';
   position: absolute;
   top: 0;
@@ -541,17 +543,7 @@ header{
   font-family: "Poppins", sans-serif; 
   
 }
-#card1,#card3,#card5,#card7,#card9,#card11{
-  position:relative ;
-  left: -400px;
-}
-#card2,#card4,#card6,#card8,#card10,#card12{
-  position:relative ;
-  left: 400px;
-}
-#card1,#card3,#card5,#card7,#card9,#card11,#card2,#card4,#card6,#card8,#card10,#card12{
-  left: 0;
-}
+
 .loader{
 
   position: fixed;
@@ -595,6 +587,8 @@ header{
 .container-options-mobile{
   display: none;
 }
+
+
 
 
 @media screen and (max-width:1124px){

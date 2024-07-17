@@ -3,16 +3,19 @@ import DataContext from '../datacontext';
 import Header from './header';
 import Loader from './loader';
 
+
+
 function Linhatemporal() {
 
 const {information} = useContext(DataContext)
 const [cards,setCards] = useState()
 const [loader,Setloader] = useState(true)
-
+const listidleft = ["#card1","#card3","#card5","#card7","#card9","#card111"]
+const listidright= ["#card2","#card4","#card6","#card8","#card10","#card12"]
 
 
 useEffect(()=>{
-
+ 
 const elemento = information.map(element => 
 <div className='card-temp link' id={`card${element.id}`} >
   <div className='container-img-card-temp'>
@@ -23,23 +26,20 @@ const elemento = information.map(element =>
 </div>)
 
 setCards(elemento)
+
 setTimeout(() => {
   Setloader(false)
-  
+ 
 }, 2000);
+
 },[information])
   
    
   return (
     <>
-
-
-  
   
 <Header></Header>
-   
-   
-   
+     
    { loader ? <Loader></Loader> : <div>
     
     <video src='/video/dna.webm' autoPlay muted loop disablePictureInPicture className='video-dna' > </video>
@@ -49,9 +49,6 @@ setTimeout(() => {
     
     
     }
-
-   
-   
    
   
     </>
