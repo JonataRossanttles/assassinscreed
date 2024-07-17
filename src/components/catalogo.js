@@ -7,6 +7,7 @@ import Header from './header';
 
 function Catalogo({style}) {
 document.body.style.backgroundImage = "url('')"
+document.body.style.marginTop = "0"
 
 
 const {information} = useContext(DataContext)

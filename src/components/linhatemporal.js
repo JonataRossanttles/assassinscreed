@@ -18,6 +18,7 @@ document.body.style.backgroundSize = 'cover'
 document.body.style.backgroundPosition = 'top' 
 document.body.style.backgroundRepeat = 'no-repeat' 
 document.body.style.height = '100vh' 
+document.body.style.marginTop = "0"
 useEffect(()=>{
  
 const elemento = information.map((element,index) => 
