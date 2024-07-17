@@ -4,6 +4,7 @@ import ScrollReveal from 'scrollreveal';
 
 function Curiosidades() {
 document.body.style.backgroundImage = "url('')"
+document.body.style.marginTop = "70px"
 
   useEffect(()=>{
     const sr = ScrollReveal();
