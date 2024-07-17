@@ -16,6 +16,8 @@ const listidright= ["#card2","#card4","#card6","#card8","#card10","#card12"]
 document.body.style.backgroundImage = "url('https://static-dm.ubisoft.com/assassins-creed/franchise/prod/b7db6092b3081a637071c8a88a9270a0.jpg')"
 document.body.style.backgroundSize = 'cover'
 document.body.style.backgroundPosition = 'top' 
+document.body.style.backgroundRepeat = 'no-repeat' 
+document.body.style.height = '100vh' 
 useEffect(()=>{
  
 const elemento = information.map((element,index) => 
