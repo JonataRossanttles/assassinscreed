@@ -3,7 +3,7 @@ import Header from './header';
 import ScrollReveal from 'scrollreveal';
 
 function Curiosidades() {
-
+document.body.style.backgroundImage = "url('')"
 
   useEffect(()=>{
     const sr = ScrollReveal();

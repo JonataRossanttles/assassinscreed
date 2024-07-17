@@ -6,6 +6,8 @@ import Descri from './descri';
 import Header from './header';
 
 function Catalogo({style}) {
+document.body.style.backgroundImage = "url('')"
+
 
 const {information} = useContext(DataContext)
 const [games,setGames] =  useState()

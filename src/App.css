@@ -496,8 +496,8 @@ header{
   position: relative;
   z-index: 1;
   border-radius: 6px 6px 0px 0px;
-  width: 100%;
-  height: 400px;
+  width: 600px;
+  height: 350px;
   text-decoration: none;
   opacity: 0.9;
   
@@ -518,7 +518,8 @@ header{
   
 }
 .card-temp{
-  width: 300px;
+  display: flex;
+  position: relative;
 }
 
 
@@ -531,21 +532,59 @@ header{
   left: 50%;
   width: 100%;
   height: 100vh;
+  gap: 30px;
   transform: translate(-50%,-50%);
   padding-top: 100px;
   animation: card 3s;
- 
+  background-image: url('/public/imagens/back-temp.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.titulo-card-temp{
-  color: white;
-  font-size: 22px;
+.container-back-temp{
+  background-image: url('/public/imagens/back-temp.svg');
+  background-position: top;
+  background-size: cover;
+  width: 100%;
+}
+.text-card-temp{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   font-family: "Poppins", sans-serif; 
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.123);
+  width: 500px;
+  padding: 10px;
+  height: 289px;
+  z-index: 2;
+  backdrop-filter: blur(1px);
+  border-radius: 8px;
   
+}
+#text0,#text2,#text4,#text6,#text8,#text10,#text12{
+  top: 29px;
+  left: -20px;
+}
+#card2,#card4,#card6,#card8,#card10,#card12,#card14{
+  flex-direction: row-reverse;
+  }
+  #text1,#text3,#text5,#text7,#text9,#text11,#text13{
+    top: 29px;
+    left: 20px;
+  }
+
+.inform-temp{
+margin-bottom: 20px;
+font-size: 20px;
+font-family: "Poppins", sans-serif; 
+color: white;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .loader{
-
   position: fixed;
   width: 100%;
   height: 100%;
@@ -595,6 +634,29 @@ header{
   #card1,#card3,#card5,#card7,#card9,#card11,#card2,#card4,#card6,#card8,#card10,#card12{
     left: 0;
   }
+  
+ 
+}
+@media screen and (max-width:1118px){
+  #text0,#text2,#text4,#text6,#text8,#text10,#text12{
+    top: 0;
+    left: 0;
+    
+  }
+  #card2,#card4,#card6,#card8,#card10,#card12,#card14{
+    flex-direction: column;
+    }
+    #text1,#text3,#text5,#text7,#text9,#text11,#text13{
+      top: 0;
+      left: 0;
+    }
+    .card-temp{
+      flex-direction: column;
+    }
+    .text-card-temp{
+      width: 600px;
+      border-radius: 0;
+    }
   
  
 }
@@ -657,6 +719,17 @@ transform: translate(-50%,-50%);
   padding: 5px;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.418);
+}
+.text-card-temp{
+  width: 100%;
+  
+}
+.card-temp{
+ width: 100%;
+}
+.img-card-temp{
+  width: 100%;
+  border-radius: 0;
 }
 }
 

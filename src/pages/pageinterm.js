@@ -6,6 +6,7 @@ import Catalogo from '../components/catalogo';
 
 
 function Pageinterm() {
+document.body.style.backgroundImage = "url('')"
 
 const {information} = useContext(DataContext)
 const [transicao,setTransicao] = useState(true)
