@@ -3,9 +3,12 @@ import Header from './header';
 import ScrollReveal from 'scrollreveal';
 
 function Curiosidades() {
-document.body.style.backgroundImage = "url('')"
-document.body.style.marginTop = "70px"
-document.body.style.height = '100vh' 
+document.body.style.backgroundImage = "url('/imagens/back-curiosidades.jpg')"
+document.body.style.marginTop = "75px"
+document.body.style.backgroundSize = "cover"
+document.body.style.backgroundPosition = "center"
+document.body.style.backgroundRepeat = "no-repeat"
+
 
   useEffect(()=>{
     const sr = ScrollReveal();
@@ -35,11 +38,11 @@ sr.reveal('#card-cur3',{
   return (
     <>
     
-    <Header></Header>
+    <Header style={{backgroundColor:'transparent'}} ></Header>
 <div className='container-geral-curiosidades'>
 
   <div className='card-curiosidades' id='card-cur1'>
-      <img src='/imagens/logo-principal.png' alt='' className='img-curiosidades' ></img>
+      <img src='/imagens/curiosidades1.png' alt='' className='img-curiosidades' ></img>
       <h2 className='titulo-curiosidades'>Ideia original</h2>
       <p className='texto-curiosidades'>O primeiro Assassin's Creed seria na verdade mais um jogo da franquia Prince of Persia, se tratando de um derivado de Sands of Time. O game se chamaria Prince of Persia: Assassin, mas a Ubisoft rejeitou a 
         ideia porque a história não se concentrava tanto no príncipe.
@@ -48,7 +51,7 @@ sr.reveal('#card-cur3',{
       </p>
   </div>
   <div className='card-curiosidades' id='card-cur2'>
-      <img src='/imagens/logo-principal.png' alt='' className='img-curiosidades' ></img>
+      <img src='/imagens/curiosidades22.png' alt='' className='img-curiosidades' id='img2-cur' ></img>
       <h2 className='titulo-curiosidades'>Origem</h2>
       <p className='texto-curiosidades'>A ordem vista no primeiro Assassin's Creed é baseada em um grupo real chamado Nizari Ismailis Ḥashshāshīn, 
         que existiu há muito tempo na história. Eles estavam localizados na Síria e na Pérsia,
@@ -57,7 +60,7 @@ sr.reveal('#card-cur3',{
       </p>
   </div>
   <div className='card-curiosidades' id='card-cur3'>
-      <img src='/imagens/logo-principal.png' alt='' className='img-curiosidades'  id='img-cur3'></img>
+      <img src='/imagens/inspiração.png' alt='' className='img-curiosidades'  id='img-cur3'></img>
       
       <h2 className='titulo-curiosidades'>Inspiração</h2>
       <p className='texto-curiosidades'>

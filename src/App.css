@@ -151,6 +151,9 @@ left: 50%;
 transform: translate(-50%);
 
 }
+#img2-cur{
+  width: 350px;
+}
 
 .titulo-curiosidades, .texto-curiosidades{
   color: white;
@@ -169,6 +172,8 @@ transform: translate(-50%);
   justify-items: center;
    gap: 30px;
   margin: auto;
+  height: 100vh;
+  max-width: 1440px;
 }
 
 .titulo-card{
@@ -267,6 +272,15 @@ transform: translate(-50%);
   background-color: #057773;
   mask-image: linear-gradient( to right, #057773, rgba(255, 255, 255, 0.582));
 }
+.container-section.AssassinsCreedChronicles::before {  
+  background-color: #D46154;
+  mask-image: linear-gradient( to right, #D46154, rgba(255, 255, 255, 0.582));
+} 
+.container-section.AssassinsCreedMirage::before {  
+  background-color: #B8633D;
+  mask-image: linear-gradient( to right, #B8633D, rgba(255, 255, 255, 0.582));
+} 
+
 .container-geral-section{ 
   position: relative;
   width: 100%;
@@ -691,7 +705,7 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   header{
     background-color: black;
   }
-}
+} 
 
 @media screen and (max-width:654px){
  .container-section{
@@ -754,3 +768,8 @@ transform: translate(-50%,-50%);
    }
   
 }
+@media screen and (min-height:900px){
+  .container-geral-section{
+    height: 100vh;
+  }
+} 

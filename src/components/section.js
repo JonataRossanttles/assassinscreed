@@ -15,6 +15,7 @@ const [estado2,setEstado2] = useState(false)
 const [gameselect, setGameselect] = useState({})
 
 document.body.style.backgroundImage = "url('')"
+document.body.style.marginTop = "0"
 useEffect(()=>{
   if(localDatajson){
     const obj =  localDatajson.find(element => element.name === parametro.id)
