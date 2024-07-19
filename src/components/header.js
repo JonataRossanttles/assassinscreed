@@ -12,7 +12,7 @@ const [menu,setMenu] = useState([])
 const [menumobile,setMenumobile] = useState(false)
 const list = ['Loja','Curiosidades','Linha temporal']
 
-console.log(menumobile)
+
 useEffect(() => {
   if (setElementosfiltrados) {
     setElementosfiltrados(information);
@@ -51,7 +51,7 @@ useEffect(()=>{
  setMenu(li)
  },[])
 
- console.log(path)
+
   return (
     <>
     
