@@ -51,12 +51,12 @@ useEffect(()=>{
  setMenu(li)
  },[])
 
-
+console.log(menumobile)
   return (
     <>
     
-    <header style={{backgroundColor: (path.pathname === '/Linha%20temporal' && menumobile == false) 
-      || path.pathname === '/Curiosidades' ? 'transparent' : 'black' }}>
+    <header style={{backgroundColor: (path.pathname === '/Linha%20temporal' && menumobile === false) 
+      || (path.pathname === '/Curiosidades'  && menumobile === false) ? 'transparent' : 'black' }}>
       <div className='container-logo-header'>
       <Link to='/catalogo' className='link'>
         <img src='/imagens/logo-header.png' alt='' className='logo-header'></img>
