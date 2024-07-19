@@ -5,7 +5,7 @@ import DataContext from '../datacontext';
 
 function Section() {
 
-const {information,localDatajson} = useContext(DataContext)
+const {information} = useContext(DataContext)
 const localstorage = JSON.parse(localStorage.getItem('assassinsCreedData'))
 const parametro = useParams()
 const [nameprev,setNameprev] = useState()
@@ -13,7 +13,6 @@ const [namenext,setNamenext] = useState()
 const [estado,setEstado] = useState(false)
 const [estado2,setEstado2] = useState(false)
 const [gameselect, setGameselect] = useState({})
-
 
 
 document.body.style.backgroundImage = "url('')"
@@ -27,7 +26,7 @@ useEffect(()=>{
     return setGameselect(obj)
   }
 
-},[information,parametro])
+},[information,parametro,localstorage])
 
 useEffect(()=>{
   if(gameselect.id){
@@ -41,7 +40,7 @@ useEffect(()=>{
      return  setNameprev(nameprev)
     }
   }
-},[gameselect,information,parametro])
+},[gameselect,information,parametro,localstorage])
    
 useEffect(()=>{
   if(gameselect.id){
@@ -55,7 +54,7 @@ useEffect(()=>{
      return  setNamenext(namenext)
     }
   }
-},[gameselect,information,parametro])
+},[gameselect,information,parametro,localstorage])
 
 
     

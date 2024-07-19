@@ -5,8 +5,6 @@ const DataContext = createContext();
 
 export const Provider = ({ children }) => {
   const [information, setInformation] = useState([]);
-  const localData = localStorage.getItem('assassinsCreedData');
-  const [localDatajson,setlocalDatajson] = useState({})  ;
  document.body.style.backgroundColor = 'black'
 
 useEffect(()=>{
@@ -18,8 +16,6 @@ useEffect(()=>{
         (data) => {setInformation(data)
          localStorage.setItem('assassinsCreedData',JSON.stringify(data)) 
          
-         setlocalDatajson( data)   
-                
                   });
  
 
@@ -28,7 +24,7 @@ useEffect(()=>{
 
 
   return (
-    <DataContext.Provider value={{ information ,localDatajson}}>
+    <DataContext.Provider value={{ information}}>
       {children}
     </DataContext.Provider>
   );
