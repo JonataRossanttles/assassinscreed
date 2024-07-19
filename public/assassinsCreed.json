@@ -424,5 +424,35 @@
     "logo":"https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6euY5hlpAn7H1T9BZmpg3V/5491df67dc63daf5bd8d6bb6b764e358/ac-game-logo-mirage.png",
     "widthlogo":"250px",
     "heightlogo":"79px"
+  },{
+    "id": 15,
+    "name": "Assassin's Creed Shadows",
+    "genre": "Action RPG",
+    "remastered": false,
+    "poster": "https://upload.wikimedia.org/wikipedia/pt/thumb/2/2a/Assassins_Creed_shadows_cover.jpg/250px-Assassins_Creed_shadows_cover.jpg",
+    "synopsis": "Torne-se uma assassina shinobi letal e um poderoso samurai lendário enquanto explora um mundo aberto maravilhoso em tempos caóticos. Jogue com dois aliados improváveis enquanto desvenda uma história em comum e traga uma nova era ao Japão.",
+    "developer": ["Ubisoft Quebec"],
+    "release_date": "Em breve...",
+    "publisher": "Ubisoft",
+    "engine": "Anvil Pipeline",
+    "composer": [""],
+    "ESRB_rating": "",
+    "platforms": [	
+      "PlayStation 5",
+      "Xbox Series X/S",
+      "Windows",
+      "MacOS"
+    ],
+    "trailer": "<iframe width='100%' height='100%' src='https://www.youtube.com/embed/vovkzbtYBC8?si=FqJOdrnnbmIPTy7g' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+    "website": "https://www.ubisoft.com/pt-br/game/assassins-creed/shadows",
+    "imgprincipal": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4OPbjaviVsEhAPyRmHCxpg/1f87652e1753818b0a5bc19888f85bbc/acf-ac-red-header-bg-desktop.jpg",
+    "img1": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/43vqkOMOkH4o38hqrEy2Ss/b72e2ce01fec660ffd5453038bc451a4/AC_RED_NachiFalls.jpg",
+    "img2": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6W2OCCNrYYIUIEsIB8iaqU/0fb849adca1845dc0735b54d6356ed0b/2_2_AC_RED_Yasuke_Destruction.png",
+    "img3": "",
+    "img4": "",
+    "backbefore":"AssassinsCreedShadows",
+    "logo":"https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2MJoL1KfnEjtJxKpWfEUyu/c53a985a90bb0f421c6d828e91a711b1/REDlogo_Vertical_AllWhite_NoCrest.png",
+    "widthlogo":"250px",
+    "heightlogo":"79px"
   }
 ]

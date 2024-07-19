@@ -281,6 +281,11 @@ transform: translate(-50%);
   mask-image: linear-gradient( to right, #B8633D, rgba(255, 255, 255, 0.582));
 } 
 
+.container-section.AssassinsCreedShadows::before {  
+  background-color: rgba(0, 0, 0, 0.164);
+  mask-image: linear-gradient( to right, rgba(0, 0, 0, 0.329), rgba(255, 255, 255, 0.582));
+} 
+
 .container-geral-section{ 
   position: relative;
   width: 100%;
@@ -577,7 +582,7 @@ header{
   border-radius: 8px;
   
 }
-#text0,#text2,#text4,#text6,#text8,#text10,#text12{
+#text0,#text2,#text4,#text6,#text8,#text10,#text12,#text14{
   top: 29px;
   left: -20px;
 }
