@@ -18,6 +18,9 @@ const [gameselect, setGameselect] = useState({})
 document.body.style.backgroundImage = "url('')"
 document.body.style.marginTop = "0"
 
+   useEffect(()=>{
+   window.scrollTo(0, 0)
+ },[])
 
 useEffect(()=>{
    window.scrollTo(0, 0)
