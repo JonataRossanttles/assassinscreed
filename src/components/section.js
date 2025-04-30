@@ -2,6 +2,7 @@ import React, {useState,useEffect, useContext} from 'react';
 import {useParams} from 'react-router-dom';
 import {Link} from 'react-router-dom'
 import DataContext from '../datacontext';
+import { useLocation } from 'react-router-dom'
 
 function Section() {
 
@@ -13,6 +14,7 @@ const [namenext,setNamenext] = useState()
 const [estado,setEstado] = useState(false)
 const [estado2,setEstado2] = useState(false)
 const [gameselect, setGameselect] = useState({})
+const location = useLocation()
 
 
 document.body.style.backgroundImage = "url('')"
@@ -20,7 +22,7 @@ document.body.style.marginTop = "0"
 
    useEffect(()=>{
    window.scrollTo(0, 0)
- },[])
+ },[location])
 
 useEffect(()=>{
    window.scrollTo(0, 0)
