@@ -28,7 +28,7 @@ document.body.style.marginTop = "0"
  },[parametro])
 
 useEffect(()=>{
-   window.scrollTo(0, 0)
+   
   if(localstorage){
     const obj =  localstorage.find(element => element.name === parametro.id)
    
