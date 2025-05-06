@@ -21,7 +21,10 @@ document.body.style.backgroundImage = "url('')"
 document.body.style.marginTop = "0"
 
    useEffect(()=>{
-   window.scrollTo(0, 0)
+      setTimeout(()=>{
+          window.scrollTo(0, 0)
+      },100)
+  
  },[parametro])
 
 useEffect(()=>{
