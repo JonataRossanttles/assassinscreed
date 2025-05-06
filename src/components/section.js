@@ -24,7 +24,7 @@ document.body.style.marginTop = "0"
       
           window.scrollTo(0, 0)
        
- },[location.pathname])
+ },[parametro])
 
 useEffect(()=>{
    
